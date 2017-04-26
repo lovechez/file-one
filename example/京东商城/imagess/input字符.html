@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function () {
+            var txt = document.getElementById("txt");
+            var btn = document.getElementsByTagName("button")[0];
+            btn.onclick = function () {
+                alert(txt.value + txt.value);
+                alert(Number(txt.value)+Number(txt.value));
+                alert(parseInt(txt.value)*parseInt(txt.value));
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt"/>
+<button>点击</button>
+</body>
+</html>

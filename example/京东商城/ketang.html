@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ketang</title>
+    <script src="my.js" type="text/javascript"></script>
+</head>
+<body>
+<img src="images/jd1.png" id="pic"/>
+<script>
+    var pic = document.getElementById("pic");
+    pic.onmouseover = function () {
+       pic.onmouseout = function () {
+           pic.src = "images/jd1.png";
+      }
+
+        pic.src = "images/jd2.png";
+    }
+</script>
+</body>
+</html>

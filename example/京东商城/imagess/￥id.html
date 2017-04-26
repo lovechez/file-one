@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<div id="nav"></div>
+<div id="text"></div>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    $("box").style.backgroundColor = "red";
+    $("nav").style.backgroundColor = "purple";
+</script>
+</body>
+</html>

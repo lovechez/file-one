@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 500px;
+            background-color: #eeeeee;
+            margin: 100px auto;
+        }
+        .bottom div {
+            height: 400px;
+            width: 500px;
+            background-color: pink;
+            display: none;
+        }
+        .red {
+            background-color: red;
+        }
+        .bottom .blocks {
+            display: block;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var btns = document.getElementsByTagName("button");
+            //alert(btns.length);
+            var divs = document.getElementById("divs").getElementsByTagName("div");
+            //alert(divs.length);
+            for(var i=0;i<btns.length;i++)
+            {
+                btns[i].index = i;
+                btns[i].onclick = function () {
+                    for(var j=0;j<btns.length;j++)
+                    {
+                        btns[j].className = "";
+                        divs[j].className = "none";
+                    }
+                    this.className = "red";
+                    divs[this.index].className = "blocks";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    <div class="top">
+        <button>第一个按钮</button>
+        <button>第二个按钮</button>
+        <button>第三个按钮</button>
+        <button>第四个按钮</button>
+        <button>第五个按钮</button>
+    </div>
+    <div class="bottom" id="divs">
+        <div class="blocks">第一个盒子</div>
+        <div>第二个盒子</div>
+        <div>第三个盒子</div>
+        <div>第四个盒子</div>
+        <div>第五个盒子</div>
+    </div>
+</div>
+</body>
+</html>
